@@ -8,7 +8,7 @@ function Jroom() {
     const navigate = useNavigate();
     const handleclick = async ()=>{    
         try {
-            const response =  await fetch("https://chat1-seven.vercel.app/join", { 
+            const response =  await fetch("https://chat1-eqce.onrender.com/join", { 
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
