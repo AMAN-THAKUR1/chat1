@@ -37,7 +37,7 @@ function Croom() {
     }
 
     const handleUnload = async () => {
-        await fetch("https://chat1-seven.vercel.app/delete", {
+        await fetch("https://chat1-eqce.onrender.com/delete", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -58,7 +58,7 @@ function Croom() {
     
         else {
             try {
-                fetch("https://chat1-seven.vercel.app/create", { method: "GET" })
+                fetch("https://chat1-eqce.onrender.com/create", { method: "GET" })
                     .then(res => res.json())
                     .then(data => {
 
@@ -75,7 +75,7 @@ function Croom() {
 
     useEffect(() => {
 
-        const newSocket = io("https://chat1-seven.vercel.app");
+        const newSocket = io("https://chat1-eqce.onrender.com");
         setSocket(newSocket);
 
         newSocket.on("connect", () => {
