@@ -37,7 +37,7 @@ function Croom() {
     }
 
     const handleUnload = async () => {
-        await fetch("http://192.168.42.164:5000/delete", {
+        await fetch("https://chat1-seven.vercel.app/delete", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -58,7 +58,7 @@ function Croom() {
     
         else {
             try {
-                fetch("http://192.168.42.164:5000/create", { method: "GET" })
+                fetch("https://chat1-seven.vercel.app/create", { method: "GET" })
                     .then(res => res.json())
                     .then(data => {
 
@@ -75,7 +75,7 @@ function Croom() {
 
     useEffect(() => {
 
-        const newSocket = io("http://192.168.42.164:5000");
+        const newSocket = io("https://chat1-seven.vercel.app");
         setSocket(newSocket);
 
         newSocket.on("connect", () => {
